@@ -1,0 +1,75 @@
+.skills {
+  padding: 60px 10%;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: white;
+  text-align: center;
+}
+
+.skills h2 {
+  font-size: 2.5rem;
+  color: #ffcc00;
+  margin-bottom: 20px;
+}
+
+/* Main Skills Buttons */
+.skills-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.skill-button {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  color: white;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.skill-button.active {
+  background: #ffcc00;
+  color: black;
+}
+
+.skill-button:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* Sub-Skills Display */
+.sub-skills-container {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+  transition: 0.3s ease-in-out;
+}
+
+.sub-skills h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #ffcc00;
+}
+
+.sub-skills ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sub-skills li {
+  font-size: 1.1rem;
+  padding: 5px 0;
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .skills-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+}
