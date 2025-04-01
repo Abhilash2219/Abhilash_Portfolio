@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Image from "next/image"; // Import Next.js Image
 import "../styles/certificates.css";
 
 const Certificates = () => {
@@ -14,7 +15,7 @@ const Certificates = () => {
   return (
     <section id="certificates" className="certificates">
       <h2>Certificates</h2>
-      
+
       {/* Certificates Grid */}
       <div className="certificates-grid">
         {certificates.map((cert) => (
@@ -23,7 +24,13 @@ const Certificates = () => {
             className="certificate-item"
             onClick={() => setSelectedImage(cert.src)}
           >
-            <img src={cert.src} alt={cert.alt} />
+            <Image 
+              src={cert.src} 
+              alt={cert.alt} 
+              width={300} // Adjust width
+              height={200} // Adjust height
+              className="certificate-image"
+            />
             <p className="certificate-name">{cert.name}</p> {/* Display certificate name */}
           </div>
         ))}
@@ -34,7 +41,11 @@ const Certificates = () => {
         <div className="lightbox" onClick={() => setSelectedImage(null)}>
           <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
             <button className="close-btn" onClick={() => setSelectedImage(null)}>✖</button>
-            <img src={selectedImage} alt="Certificate" className="full-certificate" />
+            <Image 
+              src={selectedImage} 
+              alt="Certificate" 
+              className="full-certificate" 
+            />
           </div>
         </div>
       )}
