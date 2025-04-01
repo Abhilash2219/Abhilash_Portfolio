@@ -1,75 +1,110 @@
+/* projects.css */
+
 .projects {
-    text-align: center;
-    padding: 60px 10%;
-    background: #f9f9f9;
+  padding: 60px 10%;
+  background-color: #f9f9f9;
+  color: #333;
+  text-align: center;
+  min-height: 60vh;
+  box-sizing: border-box; /* Ensures padding is included in total width */
+}
+
+.projects h2 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Automatically fills the space */
+  gap: 30px; /* Ensures there is space between the cards */
+  justify-items: center;
+}
+
+.project-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 100%;
+  max-width: 450px; /* Limits the card width to avoid overflow */
+  box-sizing: border-box; /* Ensures padding is included within width */
+  transition: transform 0.3s ease-in-out;
+  overflow: hidden; /* Prevents content overflow */
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+}
+
+.project-card h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #0077b5;
+  overflow-wrap: break-word; /* Ensures long words break onto the next line */
+  word-wrap: break-word; /* Ensures long words break onto the next line */
+}
+
+.project-card p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #555;
+  overflow-wrap: break-word; /* Prevents text from overflowing */
+  word-wrap: break-word; /* Prevents text from overflowing */
+}
+
+.tech-stack {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap; /* Ensures tech stack items wrap on smaller screens */
+}
+
+.tech-stack li {
+  font-size: 0.9rem;
+  background-color: #e1f0f7;
+  color: #0077b5;
+  padding: 6px 12px;
+  border-radius: 20px;
+}
+
+.btn {
+  padding: 8px 24px;
+  font-size: 1rem;
+  background-color: #0077b5;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #005f8d;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .projects {
+    padding: 40px 5%;
   }
-  
-  .projects h2 {
-    font-size: 2.2rem;
-    margin-bottom: 20px;
-    color: #333;
-  }
-  
+
   .projects-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    grid-template-columns: 1fr; /* Stack the cards on smaller screens */
+    gap: 20px; /* Maintain gap between cards */
   }
-  
+
   .project-card {
-    background: white;
-    padding: 20px;
-    width: 300px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease-in-out;
+    width: 100%;
   }
-  
-  .project-card:hover {
-    transform: scale(1.05);
-  }
-  
-  .project-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    color: #222;
-  }
-  
-  .project-card p {
-    font-size: 1rem;
-    margin-bottom: 15px;
-    color: #555;
-  }
-  
+
   .tech-stack {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
+    justify-content: flex-start;
   }
-  
-  .tech-stack li {
-    color: black;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 0.9rem;
-  }
-  
-  .btn {
-    display: inline-block;
-    text-decoration: none;
-    background: #007bff;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 5px;
-    margin-top: 10px;
-    transition: background 0.3s;
-  }
-  
-  .btn:hover {
-    background: #0056b3;
-  }
-  
+}

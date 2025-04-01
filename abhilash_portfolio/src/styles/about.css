@@ -1,56 +1,40 @@
+/* about.css */
 .about {
+  background: none; /* Remove the background */
+  color: #333; /* Dark text color for better contrast */
+  padding: 60px 10%;
   display: flex;
-  align-items: center;
   justify-content: center;
-  padding: 80px 10%;
-  background: linear-gradient(135deg, #1e3c72, #2a5298);
-  color: white;
-  
-  text-align: center;
+  align-items: flex-start; /* Align content to the top of the section */
+  min-height: 60vh;
 }
 
 .about-content {
-  max-width: 700px;
+  width: 100%; /* Ensure the content takes up the full width */
+  max-width: 800px; /* Set a maximum width for readability */
+  text-align: left; /* Align text to the left */
+  line-height: 1.6; /* Increase line height for better readability */
 }
 
-.about-content h2 {
-  font-size: 2.5rem;
-  margin-bottom: 15px;
-  color: #ffcc00;
+.about h2 {
+  font-size: 2.5rem; /* Slightly smaller heading size */
+  margin-bottom: 15px; /* Space below the heading */
+  font-weight: 700;
+  
+  letter-spacing: 1px;
 }
 
-.about-content p {
+.about p {
   font-size: 1.2rem;
-  margin: 10px 0;
+  margin: 10px 0 20px; /* Space between paragraphs */
   opacity: 0.9;
-  line-height: 1.6;
 }
 
-.about-content span {
-  color: #ffcc00;
+.about span {
+  color: #0077b5; /* Highlight name with a blue color */
   font-weight: bold;
 }
 
-.btn {
-  display: inline-block;
-  padding: 12px 20px;
-  font-size: 1rem;
-  text-decoration: none;
-  border-radius: 8px;
-  transition: 0.3s ease-in-out;
-  background: #ffcc00;
-  color: #222;
-  font-weight: bold;
-  margin-top: 15px;
-}
-
-.btn:hover {
-  background: #e6b800;
-  transform: scale(1.05);
-}
-
-@media (max-width: 768px) {
-  .about {
-    padding: 60px 5%;
-  }
+.about strong {
+  color: #ff6600; /* Highlight important text with a strong color */
 }

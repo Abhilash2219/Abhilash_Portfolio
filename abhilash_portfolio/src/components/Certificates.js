@@ -5,10 +5,10 @@ const Certificates = () => {
   const [selectedImage, setSelectedImage] = useState(null);
 
   const certificates = [
-    { id: 1, src: "/cert1.jpg", alt: "Certificate 1" },
-    { id: 2, src: "/cert2.jpg", alt: "Certificate 2" },
-    { id: 3, src: "/cert3.jpg", alt: "Certificate 3" },
-    { id: 4, src: "/cert4.jpg", alt: "Certificate 4" },
+    { id: 1, src: "/images/TCS.jpg", alt: "Certificate 1", name: "TCS iON Career Edge - Young Professional" },
+    { id: 2, src: "/images/ibm.jpg", alt: "Certificate 2", name: "Python for Data Science" },
+    { id: 3, src: "/images/sharktank.jpg", alt: "Certificate 3", name: "Entrepreneurship Meet" },
+    { id: 4, src: "/images/DataScience.jpg", alt: "Certificate 4", name: "Data Science and Machine Learning Internship" },
   ];
 
   return (
@@ -24,6 +24,7 @@ const Certificates = () => {
             onClick={() => setSelectedImage(cert.src)}
           >
             <img src={cert.src} alt={cert.alt} />
+            <p className="certificate-name">{cert.name}</p> {/* Display certificate name */}
           </div>
         ))}
       </div>
@@ -31,7 +32,10 @@ const Certificates = () => {
       {/* Lightbox Effect */}
       {selectedImage && (
         <div className="lightbox" onClick={() => setSelectedImage(null)}>
-          <img src={selectedImage} alt="Certificate" />
+          <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
+            <button className="close-btn" onClick={() => setSelectedImage(null)}>✖</button>
+            <img src={selectedImage} alt="Certificate" className="full-certificate" />
+          </div>
         </div>
       )}
     </section>

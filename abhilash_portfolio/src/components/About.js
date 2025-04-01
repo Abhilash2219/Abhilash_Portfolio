@@ -13,7 +13,6 @@ const About = () => {
           I love solving complex problems and turning ideas into reality with clean and efficient code. 
           My goal is to create seamless digital experiences that make a difference.
         </p>
-        <a href="/resume.pdf" className="btn">📄 Download Resume</a>
       </div>
     </section>
   );

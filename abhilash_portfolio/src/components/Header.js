@@ -1,17 +1,19 @@
 import Link from "next/link";
-import { Home } from "lucide-react"; // Import Home icon from Lucide React
+import { FaHome } from "react-icons/fa"; // Import FaHome icon
 import "../styles/header.css";
 
 const Header = () => {
   return (
     <header className="header">
       <nav>
-        <ul>
+        <ul style={{ marginLeft: 0 }}>
           <li>
             <Link href="/">
-              <Home size={24} /> {/* Home icon instead of text */}
+              <FaHome size={24} style={{ color: "white" }} /> 
             </Link>
           </li>
+        </ul>
+        <ul style={{ marginLeft: "auto" }}>
           <li><Link href="#about">About Me</Link></li>
           <li><Link href="#skills">Skills</Link></li>
           <li><Link href="#experience">Experience</Link></li>

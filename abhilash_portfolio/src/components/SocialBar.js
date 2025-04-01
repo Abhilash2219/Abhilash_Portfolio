@@ -1,5 +1,5 @@
 import '../styles/socialbar.css';
-import { FaLinkedin, FaEnvelope, FaPhone } from 'react-icons/fa';
+import { FaLinkedin, FaEnvelope, FaMobileAlt  } from 'react-icons/fa';
 
 const SocialBar = () => {
   return (
@@ -8,7 +8,7 @@ const SocialBar = () => {
         <FaEnvelope /> abhilashbadiger0000@gmail.com
       </a>
       <a href="tel:+918951104063" className="social-item">
-        <FaPhone /> +91 89511 04063
+        <FaMobileAlt  /> +91 89511 04063
       </a>
       <a href="https://www.linkedin.com/in/abhilashbadiger/" target="_blank" rel="noopener noreferrer" className="social-item">
         <FaLinkedin /> LinkedIn

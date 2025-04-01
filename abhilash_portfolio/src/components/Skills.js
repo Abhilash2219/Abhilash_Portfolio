@@ -5,6 +5,12 @@ const Skills = () => {
   const [activeSkill, setActiveSkill] = useState("frontend");
 
   const skillsData = [
+
+    {
+      id:"programming",
+      title:"Programming Languages",
+      subSkills: ["Python", "Java",],
+    },
     {
       id: "frontend",
       title: "Frontend Development",
@@ -13,7 +19,7 @@ const Skills = () => {
     {
       id: "backend",
       title: "Backend Development",
-      subSkills: ["Node.js", "Express.js", "PHP"],
+      subSkills: ["Node.js", "Express.js"],
     },
     {
       id: "database",
@@ -29,7 +35,7 @@ const Skills = () => {
 
   return (
     <section id="skills" className="skills">
-      <h2>Tech Stack</h2>
+      <h2 className="skills-title">Tech Stack</h2>
 
       {/* Main Skills as Buttons */}
       <div className="skills-buttons">
@@ -50,7 +56,7 @@ const Skills = () => {
           .filter((skill) => skill.id === activeSkill)
           .map((skill) => (
             <div key={skill.id} className="sub-skills">
-              <h3>{skill.title}</h3>
+              
               <ul>
                 {skill.subSkills.map((sub, index) => (
                   <li key={index}>{sub}</li>

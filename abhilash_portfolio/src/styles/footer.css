@@ -1,52 +1,66 @@
+/* footer.css */
+
 .footer {
-  background: #1e1e1e;
-  color: white;
+  color: #333;
+  padding-top: 50px; 
   text-align: center;
-  padding: 15px 3%;  /* Reduced padding for a thinner appearance */
-  width: 94%;  /* Decreased width */
- 
+  font-family: 'Arial', sans-serif;
+  position: relative;
 }
 
 .footer h2 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
 }
 
 .footer-links {
   display: flex;
-  justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap;
-  margin-bottom: 10px;
+  justify-content: center; /* Align the links horizontally */
+  gap: 30px;
+  margin-bottom: 20px;
 }
 
 .footer-link {
+  color: #333;
+  text-decoration: none;
+  font-size: 1.1rem;
   display: flex;
   align-items: center;
-  gap: 6px;
-  font-size: 1rem;
-  color: white;
-  text-decoration: none;
-  transition: color 0.3s ease-in-out;
-}
-
-.footer-link svg {
-  font-size: 1.1rem;
+  gap: 10px;
+  transition: color 0.3s ease;
 }
 
 .footer-link:hover {
-  color: #00aaff;
+  color: #0077b5;
+}
+
+.footer-link svg {
+  font-size: 1.3rem;
 }
 
 .footer-copy {
-  font-size: 0.8rem;
-  opacity: 0.6;
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 20px;
 }
 
-/* Responsive */
+/* Mobile responsiveness */
 @media (max-width: 768px) {
   .footer {
-    width: 75%; /* Adjusts width for smaller screens */
-    padding: 12px 5%;
+    padding: 40px 5%;
+  }
+
+  .footer h2 {
+    font-size: 1.8rem;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-copy {
+    font-size: 0.8rem;
   }
 }
