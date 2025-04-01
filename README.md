@@ -1,63 +1,40 @@
-# Next.js Portfolio Project
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
 
-## 🚀 Introduction
-This is a personal portfolio website built using **Next.js**. It showcases my skills, experience, certifications, and projects in a structured and interactive manner.
+## Getting Started
 
-## 📂 Project Structure
-```
-/ ├── src/ │   ├── app/   # (For Next.js 13+ App Router) │   ├── pages/  # (For Next.js 12 or Pages Router) │   ├── components/ │   ├── styles/ │   ├── public/ ├── package.json ├── tsconfig.json ├── next.config.js ├── README.md
-```
+First, run the development server:
 
-## 🌟 Features
-- **Fully Responsive Design**
-- **Next.js App Router / Pages Router** (Supports SSR & SSG)
-- **Dark & Light Mode** (Optional)
-- **SEO Optimized**
-- **Dynamic Project & Experience Sections**
-- **Contact Form with Email Integration**
-
-## ⚙️ Installation
-### 1️⃣ Clone the Repository
-```sh
-git clone https://github.com/your-username/portfolio.git
-cd portfolio
-```
-### 2️⃣ Install Dependencies
-```sh
-npm install  # or yarn install
-```
-### 3️⃣ Run the Development Server
-```sh
-npm run dev  # or yarn dev
-```
-Then open [http://localhost:3000](http://localhost:3000) in your browser.
-
-## 🏗️ Build & Deployment
-### 1️⃣ Build for Production
-```sh
-npm run build
-```
-### 2️⃣ Start the Production Server
-```sh
-npm run start
-```
-### 3️⃣ Deploy on Vercel
-```sh
-vercel
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-## 🛠️ Technologies Used
-- **Next.js**
-- **React.js**
-- **Tailwind CSS**
-- **TypeScript**
-- **MongoDB (Optional, for Backend)**
-- **Vercel (For Hosting)**
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## 📜 License
-This project is licensed under the MIT License.
+You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
----
-🚀 **Developed by Abhilash Subhash Badiger**
+[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
 
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
 
+This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
