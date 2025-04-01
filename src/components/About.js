@@ -6,7 +6,7 @@ const About = () => {
       <div className="about-content">
         <h2>About Me</h2>
         <p>
-          Hi, I'm <span>Abhilash Badiger</span>, a passionate <strong>Full-Stack Developer</strong> specializing in 
+          Hi, I&apos;m <span>Abhilash Badiger</span>, a passionate <strong>Full-Stack Developer</strong> specializing in 
           building high-quality, user-friendly applications. My expertise lies in **React.js, Next.js, Node.js, MongoDB, and Java**.
         </p>
         <p>
