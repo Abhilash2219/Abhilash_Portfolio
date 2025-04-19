@@ -1,0 +1,124 @@
+.skills {
+  padding: 60px 10%;
+  text-align: center;
+  background-color: #f9f9f9;
+  font-family: 'Arial', sans-serif;
+}
+
+.skillsTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.skillsButtons {
+  display: flex;
+  justify-content: center; /* Align buttons horizontally in the center */
+  gap: 15px; /* Increased gap between buttons */
+  margin-bottom: 40px;
+  flex-wrap: wrap; /* Allow buttons to wrap if there's not enough space */
+  align-items: center; /* Align buttons vertically if they wrap */
+}
+
+.skillButton {
+  padding: 8px 16px; /* Decreased padding to reduce button size */
+  font-size: 1rem; /* Decreased font size */
+  background-color: #0077b5;
+  color: white;
+  border: none;
+  border-radius: 30px; /* Slightly rounded corners */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.skillButton:hover {
+  background-color: #005b88;
+  transform: scale(1.05);
+}
+
+.skillButton.active {
+  background-color: #ff6600;
+  transform: scale(1.1);
+}
+
+.subSkillsContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.subSkills {
+  background-color: white;
+  padding: 15px; /* Adjusted padding for consistency */
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 280px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.subSkills:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.subSkills ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.subSkills li {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 8px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.subSkills li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  font-size: 1.5rem;
+  color: #ff6600;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media (max-width: 768px) {
+  .skills {
+    padding: 40px 5%;
+  }
+
+  .skillsTitle {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .skillsButtons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .skillButton {
+    font-size: 0.9rem; /* Smaller font size for mobile */
+    padding: 8px 12px; /* Reduced padding for mobile */
+  }
+
+  .subSkillsContainer {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .subSkills {
+    width: 100%;
+    padding: 15px; /* Consistent padding for sub-skills on mobile */
+  }
+}

@@ -1,7 +1,7 @@
-import React from "react"; 
-
+import React from "react";
 import { FaLinkedin, FaEnvelope, FaMobileAlt } from 'react-icons/fa';
 import socialLinksData from '../../public/data/socialbar.json'; // Import the JSON file
+import styles from '@/styles/socialbar.module.css'; // <-- Import your CSS module
 
 const SocialBar = () => {
   const iconMap = {
@@ -11,16 +11,16 @@ const SocialBar = () => {
   };
 
   return (
-    <div className="social-bar">
+    <div className={styles.socialBar}>
       {socialLinksData.socialLinks.map((link, index) => (
         <a
           key={index}
           href={link.href}
-          className="social-item"
-          target={link.target || "_self"} // Default to "_self" if `target` is not provided
-          rel={link.rel || ""} // Default to empty string if `rel` is not provided
+          className={styles.socialItem}
+          target={link.target || "_self"}
+          rel={link.rel || ""}
         >
-          {iconMap[link.icon] && React.createElement(iconMap[link.icon])} {/* Render the correct icon dynamically */}
+          {iconMap[link.icon] && React.createElement(iconMap[link.icon])}
           {link.label}
         </a>
       ))}

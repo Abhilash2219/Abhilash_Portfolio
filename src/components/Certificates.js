@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Image from "next/image";
+import styles from "@/styles/certificates.module.css"; // Import scoped CSS module
 
 import certificatesData from "../../public/data/certificates.json"; // Import JSON file
 
@@ -7,15 +8,15 @@ const Certificates = () => {
   const [selectedImage, setSelectedImage] = useState(null);
 
   return (
-    <section id="certificates" className="certificates">
+    <section id="certificates" className={styles.certificates}>
       <h2>Certificates</h2>
 
       {/* Certificates Grid */}
-      <div className="certificates-grid">
+      <div className={styles.certificatesGrid}>
         {certificatesData.certificates.map((cert) => (
           <div
             key={cert.id}
-            className="certificate-item"
+            className={styles.certificateItem}
             onClick={() => setSelectedImage(cert.src)}
           >
             <Image 
@@ -23,24 +24,24 @@ const Certificates = () => {
               alt={cert.alt} 
               width={cert.width} // Use width from JSON
               height={cert.height} // Use height from JSON
-              className="certificate-image"
+              className={styles.certificateImage}
             />
-            <p className="certificate-name">{cert.name}</p> {/* Display certificate name */}
+            <p className={styles.certificateName}>{cert.name}</p> {/* Display certificate name */}
           </div>
         ))}
       </div>
 
       {/* Lightbox Effect */}
       {selectedImage && (
-        <div className="lightbox" onClick={() => setSelectedImage(null)}>
-          <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
-            <button className="close-btn" onClick={() => setSelectedImage(null)}>✖</button>
+        <div className={styles.lightbox} onClick={() => setSelectedImage(null)}>
+          <div className={styles.lightboxContent} onClick={(e) => e.stopPropagation()}>
+            <button className={styles.closeBtn} onClick={() => setSelectedImage(null)}>✖</button>
             <Image 
               src={selectedImage} 
               alt="Certificate" 
               width={600} // Adjust dimensions for full view
               height={400}
-              className="full-certificate"
+              className={styles.fullCertificate}
             />
           </div>
         </div>

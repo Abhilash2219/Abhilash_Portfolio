@@ -20,7 +20,6 @@
   font-size: 2.5rem; /* Slightly smaller heading size */
   margin-bottom: 15px; /* Space below the heading */
   font-weight: 700;
-  
   letter-spacing: 1px;
 }
 
@@ -37,4 +36,33 @@
 
 .about strong {
   color: #ff6600; /* Highlight important text with a strong color */
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 1024px) {
+  .about {
+    padding: 50px 5%; /* Adjust padding for smaller screens */
+  }
+
+  .about h2 {
+    font-size: 2rem; /* Reduce heading size */
+  }
+
+  .about p {
+    font-size: 1.1rem; /* Reduce paragraph font size */
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 40px 5%; /* Less padding for very small screens */
+  }
+
+  .about h2 {
+    font-size: 1.8rem; /* Smaller heading size */
+  }
+
+  .about p {
+    font-size: 1rem; /* Even smaller paragraph font size */
+  }
 }

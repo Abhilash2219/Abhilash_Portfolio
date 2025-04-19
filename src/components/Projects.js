@@ -1,26 +1,28 @@
-
 import projectsData from "../../public/data/projects.json"; // Import the JSON file
+import styles from "@/styles/projects.module.css"; // Import the scoped CSS module
 
 const Projects = () => {
   return (
-    <section id="projects" className="projects">
-      <h2>Projects</h2>
-      <div className="projects-container">
+    <section id="projects" className={styles.projects}>
+      <h2 className={styles.projectsTitle}>Projects</h2>
+      <div className={styles.projectsContainer}>
         {projectsData.projects.map((project, index) => (
-          <div className="project-card" key={index}>
-            <h3>{project.title}</h3>
-            <p>{project.description}</p>
-            <ul className="tech-stack">
+          <div className={styles.projectCard} key={index}>
+            <h3 className={styles.projectCardTitle}>{project.title}</h3>
+            <p className={styles.projectCardDescription}>{project.description}</p>
+            <ul className={styles.techStack}>
               {project.techStack.map((tech, i) => (
-                <li key={i}>{tech}</li>
+                <li key={i} className={styles.techStackItem}>
+                  {tech}
+                </li>
               ))}
             </ul>
-            <div className="project-buttons">
+            <div className={styles.projectButtons}>
               <a
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn"
+                className={styles.btn}
               >
                 View Project
               </a>
@@ -28,7 +30,7 @@ const Projects = () => {
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-github"
+                className={`${styles.btn} ${styles.btnGithub}`}
               >
                 View Code
               </a>

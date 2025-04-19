@@ -1,4 +1,4 @@
-/* certificates.css */
+/* certificates.module.css */
 
 .certificates {
   padding: 60px 10%;
@@ -17,10 +17,7 @@
 
 .certificates-grid {
   display: grid;
-  grid-template-columns: repeat(
-    auto-fill,
-    minmax(250px, 1fr)
-  ); /* Increased min width */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
   justify-items: center;
 }
@@ -44,16 +41,17 @@
   height: auto;
   display: block;
   border-radius: 8px;
-  max-height: 280px; /* Increased image size */
+  max-height: 280px;
   object-fit: cover;
 }
 
 .certificate-name {
   margin-top: 8px;
-  font-size: 0.9rem; /* Reduced font size */
+  font-size: 0.9rem;
   color: #0077b5;
   font-weight: 500;
 }
+
 /* Lightbox Styling */
 .lightbox {
   position: fixed;
@@ -119,10 +117,10 @@
   }
 
   .certificate-item img {
-    max-height: 240px; /* Adjusted for smaller screens */
+    max-height: 240px;
   }
 
   .certificate-name {
-    font-size: 0.8rem; /* Further reduced font size for mobile */
+    font-size: 0.8rem;
   }
 }

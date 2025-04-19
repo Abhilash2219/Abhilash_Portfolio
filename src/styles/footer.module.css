@@ -1,8 +1,6 @@
-/* footer.css */
-
 .footer {
   color: #333;
-  padding-top: 50px; 
+  padding-top: 50px;
   text-align: center;
   font-family: 'Arial', sans-serif;
   position: relative;
@@ -14,32 +12,35 @@
   margin-bottom: 20px;
 }
 
-.footer-links {
+.footerLinks {
   display: flex;
-  justify-content: center; /* Align the links horizontally */
+  justify-content: center;
   gap: 30px;
   margin-bottom: 20px;
 }
 
-.footer-link {
+.footerLink {
   color: #333;
   text-decoration: none;
   font-size: 1.1rem;
   display: flex;
   align-items: center;
   gap: 10px;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, transform 0.2s ease;
 }
 
-.footer-link:hover {
+.footerLink:hover {
   color: #0077b5;
+  transform: scale(
+    1.05
+  ); /* Slightly scale up on hover for a more interactive feel */
 }
 
-.footer-link svg {
+.footerLink svg {
   font-size: 1.3rem;
 }
 
-.footer-copy {
+.footerCopy {
   font-size: 0.9rem;
   color: #666;
   margin-top: 20px;
@@ -55,12 +56,12 @@
     font-size: 1.8rem;
   }
 
-  .footer-links {
+  .footerLinks {
     flex-direction: column;
     gap: 10px;
   }
 
-  .footer-copy {
+  .footerCopy {
     font-size: 0.8rem;
   }
 }

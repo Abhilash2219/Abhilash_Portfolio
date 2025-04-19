@@ -1,5 +1,4 @@
-/* modal.css */
-.modal-overlay {
+.modalOverlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -10,28 +9,26 @@
   justify-content: center;
   align-items: center;
   z-index: 1000;
-  animation: fadeIn 0.5s ease-in-out; /* Fade in effect */
+  animation: fadeIn 0.5s ease-in-out;
 }
 
-/* Modal content */
-.modal-content {
+.modalContent {
   background: #fff;
   padding: 20px;
   border-radius: 8px;
-  width: 80%; /* Slightly reduced width */
-  height: 80%; /* Slightly reduced height */
-  max-width: 90%; /* Slight max-width to keep some margin on large screens */
-  max-height: 90%; /* Slight max-height to keep some margin on large screens */
+  width: 80%;
+  height: 80%;
+  max-width: 90%;
+  max-height: 90%;
   position: relative;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   opacity: 0;
-  transform: translateY(-50px); /* Start position from above */
-  animation: slideIn 0.5s ease-out forwards; /* Slide-in animation */
-  overflow: hidden; /* Hide any overflowing content */
+  transform: translateY(-50px);
+  animation: slideIn 0.5s ease-out forwards;
+  overflow: hidden;
 }
 
-/* Close button */
-.close-btn {
+.closeBtn {
   position: absolute;
   top: 15px;
   right: 15px;
@@ -50,20 +47,20 @@
   transition: background-color 0.3s, transform 0.2s;
 }
 
-.close-btn:hover {
+.closeBtn:hover {
   background-color: #ff1f6e;
   transform: scale(1.1);
 }
 
-/* Iframe for displaying resume */
-iframe {
+/* Fix: use class for iframe */
+.iframeStyle {
   width: 100%;
   height: 100%;
   border: none;
   border-radius: 8px;
 }
 
-/* Animation keyframes for entering effects */
+/* Animations */
 @keyframes fadeIn {
   0% {
     opacity: 0;

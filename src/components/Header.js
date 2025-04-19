@@ -1,32 +1,43 @@
+import React from 'react';
 import Link from "next/link";
-import { FaHome } from "react-icons/fa"; // Import React icons
+import { FaHome, FaInfoCircle, FaEnvelope, FaUser } from "react-icons/fa"; // Import all needed icons
+import navigationData from "../../public/data/navigation.json"; // Your navigation links
+import styles from '@/styles/header.module.css'; // Assuming you create a Header.module.css file
 
-import navigationData from "../../public/data/navigation.json"; // Import JSON file
+const iconMap = {
+  FaHome: FaHome,
+  FaInfoCircle: FaInfoCircle,
+  FaEnvelope: FaEnvelope,
+  FaUser: FaUser
+};
 
 const Header = () => {
   return (
-    <header className="header">
+    <header className={styles.header}>
       <nav>
         <ul style={{ marginLeft: 0 }}>
           {navigationData.navigationLinks
-            .filter(link => link.icon) // Only render links with icons in the first list
+            .filter(link => link.icon)
             .map((link, index) => (
               <li key={index}>
                 <Link href={link.href}>
-                  <FaHome
-                    size={link.iconSize}
-                    style={{ color: "black" }}
-                  />
+                  {iconMap[link.icon] && (
+                    <span>
+                      {React.createElement(iconMap[link.icon], { size: link.iconSize || 24, style: { color: "black" } })}
+                    </span>
+                  )}
                 </Link>
               </li>
           ))}
         </ul>
         <ul style={{ marginLeft: "auto" }}>
           {navigationData.navigationLinks
-            .filter(link => link.label) // Render links with labels in the second list
+            .filter(link => link.label)
             .map((link, index) => (
               <li key={index}>
-                <Link href={link.href}>{link.label}</Link>
+                <Link href={link.href}>
+                  {link.label}
+                </Link>
               </li>
           ))}
         </ul>

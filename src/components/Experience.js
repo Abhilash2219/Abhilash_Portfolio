@@ -1,17 +1,25 @@
-
 import experienceData from "../../public/data/experience.json"; // Import JSON file
+import styles from "../styles/experience.module.css"; // Import scoped CSS module
 
 const Experience = () => {
   return (
-    <section id="experience" className="experience">
-      <h2>Experience</h2>
-      
-      <div className="experience-container">
+    <section id="experience" className={styles.experience}>
+      <h2 className={styles.experienceTitle}>Experience</h2>
+
+      <div className={styles.experienceContainer}>
         {experienceData.experiences.map((exp, index) => (
-          <div key={index} className="experience-card">
-            <h3>{exp.title}</h3>
-            <p><strong>Duration:</strong> {exp.duration}</p>
-            <p>{exp.description}</p>
+          <div key={index} className={styles.experienceCard}>
+            <div className={styles.experienceCardDot}></div>
+            <div
+              className={`${styles.experienceCardLine} ${
+                index === 0 ? styles.experienceCardLineFirst : ""
+              } ${index === experienceData.experiences.length - 1 ? styles.experienceCardLineLast : ""}`}
+            ></div>
+            <h3 className={styles.experienceCardTitle}>{exp.title}</h3>
+            <p className={styles.experienceCardStrong}>
+              <strong>Duration:</strong> {exp.duration}
+            </p>
+            <p className={styles.experienceCardDescription}>{exp.description}</p>
           </div>
         ))}
       </div>

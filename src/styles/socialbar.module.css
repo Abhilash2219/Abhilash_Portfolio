@@ -1,14 +1,13 @@
-.social-bar {
+.socialBar {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   gap: 30px;
   background: linear-gradient(135deg, #0066cc, #003366);
   padding: 15px 0;
-  
 }
 
-.social-item {
+.socialItem {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -19,17 +18,15 @@
   transition: all 0.3s ease;
 }
 
-
-
-.social-item svg {
+.socialItem svg {
   font-size: 22px;
   transition: transform 0.3s ease;
 }
 
-.social-item:hover svg {
+.socialItem:hover svg {
   transform: rotate(360deg);
 }
 
-.social-item:active {
+.socialItem:active {
   color: #0099cc;
 }

@@ -1,0 +1,118 @@
+.experience {
+  padding: 60px 10%;
+  background-color: #f9f9f9;
+  font-family: 'Arial', sans-serif;
+}
+
+.experienceTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.experienceContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.experienceCard {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 700px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experienceCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.experienceCardTitle {
+  font-size: 1.8rem;
+  color: #0077b5;
+  margin-bottom: 10px;
+}
+
+.experienceCardDescription {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.experienceCardStrong {
+  font-weight: 600;
+}
+
+/* Roadmap line and dot */
+.experienceCardDot {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: -20px;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 12px;
+  background-color: #0077b5;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.experienceCardLine {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 40px;
+  background-color: #0077b5;
+  z-index: 0;
+}
+
+/* Customize appearance of lines and dots */
+.experienceCardLineFirst {
+  height: 20px;
+}
+
+.experienceCardLineLast {
+  display: none;
+}
+
+/* Mobile Styling */
+@media (max-width: 768px) {
+  .experience {
+    padding: 40px 5%;
+  }
+
+  .experienceTitle {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .experienceCard {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .experienceCardDot {
+    width: 10px;
+    height: 10px;
+  }
+
+  .experienceCardLine {
+    height: 30px;
+  }
+}
