@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { FaHome } from "react-icons/fa"; // Import React icons
-import "../styles/header.css";
+
 import navigationData from "../../public/data/navigation.json"; // Import JSON file
 
 const Header = () => {

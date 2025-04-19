@@ -1,5 +1,5 @@
 import React from "react"; 
-import '../styles/socialbar.css';
+
 import { FaLinkedin, FaEnvelope, FaMobileAlt } from 'react-icons/fa';
 import socialLinksData from '../../public/data/socialbar.json'; // Import the JSON file
 

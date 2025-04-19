@@ -1,4 +1,4 @@
-import "../styles/footer.css";
+
 import { FaEnvelope, FaLinkedin, FaPhone } from "react-icons/fa";
 
 const Footer = () => {

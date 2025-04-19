@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../styles/skills.css";
+
 import skillsJson from "../../public/data/skills.json"; // Import the JSON file
 
 const Skills = () => {

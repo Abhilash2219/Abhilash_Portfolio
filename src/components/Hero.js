@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Image from "next/image"; // Import Next.js Image component
-import "../styles/hero.css";
+
 import Modal from "./Modal";
 import heroData from "../../public/data/hero.json"; // Import JSON file
 

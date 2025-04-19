@@ -1,4 +1,4 @@
-import "../styles/projects.css";
+
 import projectsData from "../../public/data/projects.json"; // Import the JSON file
 
 const Projects = () => {

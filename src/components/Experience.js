@@ -1,4 +1,4 @@
-import "../styles/experience.css";
+
 import experienceData from "../../public/data/experience.json"; // Import JSON file
 
 const Experience = () => {

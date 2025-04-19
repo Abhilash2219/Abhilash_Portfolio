@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Image from "next/image";
-import "../styles/certificates.css";
+
 import certificatesData from "../../public/data/certificates.json"; // Import JSON file
 
 const Certificates = () => {
