@@ -1,0 +1,21 @@
+{
+  "socialLinks": [
+    {
+      "href": "mailto:abhilashbadiger0000@gmail.com",
+      "icon": "FaEnvelope",
+      "label": "abhilashbadiger0000@gmail.com"
+    },
+    {
+      "href": "tel:+918951104063",
+      "icon": "FaMobileAlt",
+      "label": "+91 89511 04063"
+    },
+    {
+      "href": "https://www.linkedin.com/in/abhilashbadiger/",
+      "icon": "FaLinkedin",
+      "label": "LinkedIn",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    }
+  ]
+}

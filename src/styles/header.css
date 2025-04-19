@@ -10,7 +10,7 @@
   justify-content: center;
   align-items: center;
   z-index: 1000;
-  background-color: #333; /* Added background color */
+  background-color: white; /* Added background color */
 }
 
 .header nav {
@@ -37,7 +37,7 @@
 }
 
 .header nav a {
-  color: white; /* Ensure text is visible on dark background */
+  color: black; /* Ensure text is visible on dark background */
   padding: 10px 14px;
   font-size: 15px;
   font-weight: 500;
@@ -71,11 +71,12 @@
   align-items: center;
   justify-content: center;
   padding: 8px;
+  color: black;
 }
 
 .header nav li:first-child svg {
   font-size: 24px;
-  color: white; /* Ensure the icon is visible */
+  color: black; /* Ensure the icon is visible */
 }
 
 /* Responsive Design */

@@ -1,0 +1,22 @@
+{
+  "educationData": [
+    {
+      "title": "Bachelor of Engineering (B.E.) – Computer Science and Engineering",
+      "institution": "East Point College of Engineering and Technology, Bengaluru",
+      "completionDate": "May 2024",
+      "detail": "CGPA: 8.1"
+    },
+    {
+      "title": "12th (PCMCs)",
+      "institution": "Rashtrotthana Vidya Kendra, Bengaluru",
+      "completionDate": "July 2024",
+      "detail": "Percentage: 85.6%"
+    },
+    {
+      "title": "10th",
+      "institution": "S.B.E.M School, Harugeri",
+      "completionDate": "May 2018",
+      "detail": "Percentage: 96.96%"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "certificates": [
+    {
+      "id": 1,
+      "src": "/images/TCS.jpg",
+      "alt": "Certificate 1",
+      "name": "TCS iON Career Edge - Young Professional",
+      "width": 300,
+      "height": 200
+    },
+    {
+      "id": 2,
+      "src": "/images/ibm.jpg",
+      "alt": "Certificate 2",
+      "name": "Python for Data Science",
+      "width": 300,
+      "height": 200
+    },
+    {
+      "id": 3,
+      "src": "/images/sharktank.jpg",
+      "alt": "Certificate 3",
+      "name": "Entrepreneurship Meet",
+      "width": 300,
+      "height": 200
+    },
+    {
+      "id": 4,
+      "src": "/images/DataScience.jpg",
+      "alt": "Certificate 4",
+      "name": "Data Science and Machine Learning Internship",
+      "width": 300,
+      "height": 200
+    }
+  ]
+}

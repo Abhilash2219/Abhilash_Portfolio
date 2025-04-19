@@ -1,18 +1,29 @@
+import React from "react"; 
 import '../styles/socialbar.css';
-import { FaLinkedin, FaEnvelope, FaMobileAlt  } from 'react-icons/fa';
+import { FaLinkedin, FaEnvelope, FaMobileAlt } from 'react-icons/fa';
+import socialLinksData from '../../public/data/socialbar.json'; // Import the JSON file
 
 const SocialBar = () => {
+  const iconMap = {
+    FaLinkedin: FaLinkedin,
+    FaEnvelope: FaEnvelope,
+    FaMobileAlt: FaMobileAlt
+  };
+
   return (
     <div className="social-bar">
-      <a href="mailto:abhilashbadiger0000@gmail.com" className="social-item">
-        <FaEnvelope /> abhilashbadiger0000@gmail.com
-      </a>
-      <a href="tel:+918951104063" className="social-item">
-        <FaMobileAlt  /> +91 89511 04063
-      </a>
-      <a href="https://www.linkedin.com/in/abhilashbadiger/" target="_blank" rel="noopener noreferrer" className="social-item">
-        <FaLinkedin /> LinkedIn
-      </a>
+      {socialLinksData.socialLinks.map((link, index) => (
+        <a
+          key={index}
+          href={link.href}
+          className="social-item"
+          target={link.target || "_self"} // Default to "_self" if `target` is not provided
+          rel={link.rel || ""} // Default to empty string if `rel` is not provided
+        >
+          {iconMap[link.icon] && React.createElement(iconMap[link.icon])} {/* Render the correct icon dynamically */}
+          {link.label}
+        </a>
+      ))}
     </div>
   );
 };

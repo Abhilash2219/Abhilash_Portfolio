@@ -1,0 +1,46 @@
+{
+  "projects": [
+    {
+      "title": "Car Rental System",
+      "description": "A web application for booking and managing rental cars with secure authentication and real-time availability.",
+      "techStack": ["React.js", "Node.js", "MongoDB", "Express"],
+      "link": "https://abhi-car-booking.vercel.app/",
+      "github": "https://github.com/your-username/car-rental-system"
+    },
+    {
+      "title": "Airline Reservation System",
+      "description": "An airline ticket booking system with user authentication, ticket management, and payment integration.",
+      "techStack": ["Java", "Spring Boot", "MySQL"],
+      "link": "https://your-airline-reservation-link.com",
+      "github": "https://github.com/your-username/airline-reservation-system"
+    },
+    {
+      "title": "Healthcare All-in-One Solution",
+      "description": "An integrated healthcare platform providing online appointments, medical records management, and more.",
+      "techStack": ["React.js", "MongoDB", "Express.js", "Node.js"],
+      "link": "https://your-healthcare-solution-link.com",
+      "github": "https://github.com/your-username/healthcare-solution"
+    },
+    {
+      "title": "Todo List App",
+      "description": "A simple todo list application built using the MERN stack, allowing users to create, read, update, and delete tasks.",
+      "techStack": ["MongoDB", "Express.js", "React.js", "Node.js"],
+      "link": "https://your-todo-list-app-link.com",
+      "github": "https://github.com/your-username/todo-list-app"
+    },
+    {
+      "title": "Education Portal",
+      "description": "A portal for managing student records, courses, and online learning resources for educational institutions.",
+      "techStack": ["React.js", "MongoDB", "Express.js","Node.js"],
+      "link": "https://education-portal-four.vercel.app/",
+      "github": "https://github.com/your-username/education-portal"
+    },
+    {
+      "title": "Weather App",
+      "description": "A real-time weather forecasting app using external APIs for current, hourly, and weekly forecasts.",
+      "techStack": ["React.js", "Express.js", "OpenWeather API"],
+      "link": "https://v0-weather-app-ui-rho.vercel.app/",
+      "github": "https://github.com/your-username/weather-app"
+    }
+  ]
+}

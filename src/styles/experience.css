@@ -1,56 +1,130 @@
+/* General Styling */
 .experience {
   padding: 60px 10%;
-  text-align: center;
-  background: #f4f4f4;
+  background-color: #f9fafc; /* Soft background for contrast */
+  position: relative;
 }
 
 .experience h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #333;
+  font-size: 2.8rem;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #1f4e79;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1.2px;
 }
 
-/* Experience Container */
+/* Roadmap Container */
 .experience-container {
+  position: relative;
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px; /* Space between each item */
 }
 
-/* Experience Card */
+/* Central Timeline */
+.experience-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 4px; /* Central line thickness */
+  background: linear-gradient(
+    to bottom,
+    #1f4e79,
+    #8ecae6
+  ); /* Gradient effect for the line */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+/* Roadmap Item (Card) */
 .experience-card {
-  background: white;
-  border-radius: 12px;
-  padding: 20px;
-  width: 350px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px 30px;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+  z-index: 2;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.experience-card:nth-child(odd) {
+  align-self: flex-start; /* Align left */
+}
+
+.experience-card:nth-child(even) {
+  align-self: flex-end; /* Align right */
+}
+
+/* Timeline Marker */
+.experience-card::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #1f4e79;
+  border: 4px solid white;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+}
+
+.experience-card:nth-child(odd)::before {
+  right: -35px; /* Marker for odd cards */
+}
+
+.experience-card:nth-child(even)::before {
+  left: -35px; /* Marker for even cards */
+}
+
+/* Hover Effects */
+.experience-card:hover {
+  transform: translateY(-8px); /* Subtle upward motion */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+}
+
+.experience-card:hover::before {
+  background-color: #8ecae6; /* Marker color change */
+}
+
+/* Typography Inside Cards */
 .experience-card h3 {
-  color: #1e3c72;
+  font-size: 1.5rem;
+  color: #1f4e79;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .experience-card p {
-  color: #444;
-  font-size: 1rem;
-  margin-top: 8px;
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
 }
 
-.experience-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Responsive */
+/* Responsive Design */
 @media (max-width: 768px) {
   .experience-container {
-    flex-direction: column;
-    align-items: center;
+    gap: 30px; /* Reduce gap for mobile view */
+  }
+
+  .experience-container::before {
+    left: 20px; /* Adjust timeline position */
   }
 
   .experience-card {
-    width: 90%;
+    align-self: center; /* Center align all cards */
+    max-width: 100%;
+  }
+
+  .experience-card:nth-child(odd)::before,
+  .experience-card:nth-child(even)::before {
+    left: 20px; /* Adjust marker position */
   }
 }

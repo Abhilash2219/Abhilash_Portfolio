@@ -1,0 +1,30 @@
+{
+  "navigationLinks": [
+    {
+      "href": "/",
+      "icon": "FaHome",
+      "iconSize": 24,
+      "iconColor": "white"
+    },
+    {
+      "href": "#about",
+      "label": "About Me"
+    },
+    {
+      "href": "#skills",
+      "label": "Skills"
+    },
+    {
+      "href": "#experience",
+      "label": "Experience"
+    },
+    {
+      "href": "#projects",
+      "label": "Projects"
+    },
+    {
+      "href": "#education",
+      "label": "Education"
+    }
+  ]
+}

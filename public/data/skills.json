@@ -1,0 +1,29 @@
+{
+  "skillsData": [
+    {
+      "id": "programming",
+      "title": "Programming Languages",
+      "subSkills": ["Python", "Java"]
+    },
+    {
+      "id": "frontend",
+      "title": "Frontend Development",
+      "subSkills": ["React.js", "Next.js", "JavaScript (ES6+)", "HTML & CSS"]
+    },
+    {
+      "id": "backend",
+      "title": "Backend Development",
+      "subSkills": ["Node.js", "Express.js"]
+    },
+    {
+      "id": "database",
+      "title": "Database Management",
+      "subSkills": ["MongoDB", "SQL (MySQL, PostgreSQL)"]
+    },
+    {
+      "id": "other",
+      "title": "Other Skills",
+      "subSkills": ["Linux Commands", "Git & GitHub", "REST APIs", "JWT Authentication"]
+    }
+  ]
+}

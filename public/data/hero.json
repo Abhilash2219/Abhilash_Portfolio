@@ -1,0 +1,13 @@
+{
+  "heroContent": {
+    "name": "Abhilash Badiger",
+    "description": "I'm a passionate developer specializing in creating user-friendly applications with modern technologies. I focus on providing solutions that make a real difference.",
+    "profileImage": {
+      "src": "/images/mine.png",
+      "alt": "Abhilash Badiger",
+      "width": 300,
+      "height": 300
+    },
+    "resumeUrl": "/assets/Abhilash.pdf"
+  }
+}

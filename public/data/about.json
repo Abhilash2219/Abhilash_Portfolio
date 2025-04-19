@@ -1,0 +1,9 @@
+{
+  "about": {
+    "heading": "About Me",
+    "description": [
+      "Hi, I'm <span>Abhilash Badiger</span>, a passionate <strong>Full-Stack Developer</strong> specializing in building high-quality, user-friendly applications. My expertise lies in <strong>React.js, Next.js, Node.js, MongoDB, and Java</strong>.",
+      "I love solving complex problems and turning ideas into reality with clean and efficient code. My goal is to create seamless digital experiences that make a difference."
+    ]
+  }
+}

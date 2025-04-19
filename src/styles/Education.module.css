@@ -1,0 +1,111 @@
+.education {
+  padding: 60px 10%;
+  background-color: #f9fafc;
+  position: relative;
+}
+
+.education h2 {
+  font-size: 2.8rem;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #1f4e79;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+.educationContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.educationContainer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(to bottom, #1f4e79, #8ecae6);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.educationCard {
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px 30px;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+  z-index: 2;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.educationCard:nth-child(odd)::before,
+.educationCard:nth-child(even)::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #1f4e79;
+  border: 4px solid white;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+}
+
+.educationCard:nth-child(odd)::before {
+  right: -35px;
+}
+
+.educationCard:nth-child(even)::before {
+  left: -35px;
+}
+
+.educationCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.educationCard:hover::before {
+  background-color: #8ecae6;
+}
+
+.educationCard h3 {
+  font-size: 1.5rem;
+  color: #1f4e79;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.educationCard p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .educationContainer {
+    gap: 30px;
+  }
+
+  .educationContainer::before {
+    left: 10px;
+  }
+
+  .educationCard {
+    align-self: center;
+    max-width: 100%;
+  }
+
+  .educationCard:nth-child(odd)::before,
+  .educationCard:nth-child(even)::before {
+    left: 10px;
+  }
+}

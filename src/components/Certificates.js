@@ -1,16 +1,10 @@
 import { useState } from "react";
-import Image from "next/image"; // Import Next.js Image
+import Image from "next/image";
 import "../styles/certificates.css";
+import certificatesData from "../../public/data/certificates.json"; // Import JSON file
 
 const Certificates = () => {
   const [selectedImage, setSelectedImage] = useState(null);
-
-  const certificates = [
-    { id: 1, src: "/images/TCS.jpg", alt: "Certificate 1", name: "TCS iON Career Edge - Young Professional" },
-    { id: 2, src: "/images/ibm.jpg", alt: "Certificate 2", name: "Python for Data Science" },
-    { id: 3, src: "/images/sharktank.jpg", alt: "Certificate 3", name: "Entrepreneurship Meet" },
-    { id: 4, src: "/images/DataScience.jpg", alt: "Certificate 4", name: "Data Science and Machine Learning Internship" },
-  ];
 
   return (
     <section id="certificates" className="certificates">
@@ -18,7 +12,7 @@ const Certificates = () => {
 
       {/* Certificates Grid */}
       <div className="certificates-grid">
-        {certificates.map((cert) => (
+        {certificatesData.certificates.map((cert) => (
           <div
             key={cert.id}
             className="certificate-item"
@@ -27,8 +21,8 @@ const Certificates = () => {
             <Image 
               src={cert.src} 
               alt={cert.alt} 
-              width={300} // Adjust width
-              height={200} // Adjust height
+              width={cert.width} // Use width from JSON
+              height={cert.height} // Use height from JSON
               className="certificate-image"
             />
             <p className="certificate-name">{cert.name}</p> {/* Display certificate name */}
@@ -44,7 +38,9 @@ const Certificates = () => {
             <Image 
               src={selectedImage} 
               alt="Certificate" 
-              className="full-certificate" 
+              width={600} // Adjust dimensions for full view
+              height={400}
+              className="full-certificate"
             />
           </div>
         </div>
